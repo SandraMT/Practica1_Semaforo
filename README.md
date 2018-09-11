@@ -69,9 +69,9 @@ General
 2. Dentro del void setup, declaramos cada led como salida, esto indica que sera utilizado como salida digital, es decir, emanará luz. 
 El potenciometro no es necesario indicarlo.
 
-    pinMode(led_verde,OUTPUT);
-    pinMode(led_amarillo, OUTPUT);
-    pinMode(led_rojo,OUTPUT);
+      pinMode(led_verde,OUTPUT);
+      pinMode(led_amarillo, OUTPUT);
+      pinMode(led_rojo,OUTPUT);
  
 3. Primer estado: Verde. Indica al conductor que puede pasar sin ningun problema. Se utilizará un void para controlar el manejo de cada estado.
 
