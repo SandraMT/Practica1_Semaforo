@@ -1,5 +1,6 @@
 # Practica1_Semaforo
                   S I S T E M A   A L E R T I Z A D O R   S A L V A G U A R D I A   H U M A N O - C O C H E 
+                  
 
     Descripción de la práctica
 Circuito programado desde microcontralador Arduino. Posee botones para dar paso peatonal, mientras no se oprima el boton, el semaforo de vehiculos continua en verde para un mejor flujo vehicular.
@@ -7,8 +8,7 @@ Circuito programado desde microcontralador Arduino. Posee botones para dar paso 
     Descripcion del problema
 Realizar un sistema que simule un Semáforo interactivo usando Arduino. Este debe mostrar un conjunto de semaforos que cambiaran de verde a ámbar a rojo y viceversa, luedo de un periodo de tiempo establecido, utilizando el sistema de cuatro estados de los semáforos en México. Este se extiende para incluir un conjunto de luces y un botón peatonal para solicitar cruzar la calle. Cuando llega el peatón y se dispone a cruzar, pulsa el botón que se encuentra en la parte baja del semáforo, este debe reconocer la orden y cierra el paso de los vehiculos para que el viandante pueda cruzar con seguridad hasta el otro lado de la calle. Una vez qu se acaba el tiempo estipulado para que el peaton cruce, ese semaforo permanecerá abierto para mejorar la movibilidad de los vehículos. El sitema deberá contener una perilla para controlar el tiempo mínimo en que el semáforo vehicular va a durar en verde.
 
-  **Material 
-  
+    Material 
 - Microcontrolador Arduino UNO
 - Led verde (3)
 - Led ambar (1)
@@ -21,8 +21,7 @@ Realizar un sistema que simule un Semáforo interactivo usando Arduino. Este deb
 - Jumpers
 - protoboard
 
-**CABLEADO DEL CIRCUITO
-      
+      CABLEADO DEL CIRCUITO     
 Semáforo vehicular. 
 1. Colocar los led en su respectivo orden, iniciando por la izquierda: Rojo, Ambar, Verde
 2. Cada led, deberá ir conectado a una resistencia de 330komh de la "patita" de voltaje, la otra "patita" se conecta a tierra en la    proto.
@@ -52,9 +51,9 @@ General
 3. Al utilizar toda la protoboard, se debe "puentear" para que toda la proto este energizada, esto se hace conectando positivo con positivo y negativo con negativo.
 ** Nota: Se utilizaron jumpers y cables de diferente color para identificar facilmente cada componente, para el caso de los Led, se usaron del mismo color que los leds; para conexión a voltaje, se usan cables color anaranjado; para conexión a tierra, colorverde; para los botones, color negro; para el potenciometro, color blanco.
 
- **PROGRAMACIÓN
+    PROGRAMACIÓN
     
--- Semáforo vehicular
+    -- Semáforo vehicular
  1. Se definen cada uno de los led con sus respectivos pines a los que estan conectados y el potenciometro, ya que con este manejaremos el tiempo en que dura el paso vehicular (led verde prendido). 
  
   #define led_verde 2
@@ -99,7 +98,7 @@ El potenciometro no es necesario indicarlo.
       void preventivaVerde (){
       
   4.1 Se utilizará un ciclo for para controlar el encendido y apagado del led verde, esto se hará 3 veces. Inicia el led predido y posteriormente, comienza a parpadear 3 veces. El tiempo en que dura encendido el led antes de comenzar a parpadear (2do estado), será controlado por el valor que tome el potenciometro.
-  Dentro del ciclo, se declara una variable de tipo entero la cual funcionará como contador del encendido y apagado, cuanto este llegue a 3, termina este estado. Se debe declarar primero el led en estado alto (HIGH) para el encendido asignando un tiempo de duración del encendido, posteriormente, se declara el mismo led, en estado bajo (LOW) y de igual manera, un tiempo asignado en el que debera estar apagado.
+  Dentro del ciclo, se declara una variable de tipo entero la cual funcionará como contador del encendido y apagado, cuanto este llegue a 3, termina este estado. Se debe declarar primero el led en estado alto (HIGH) para el encendido asignando un tiempo de duración del encendido, posteriormente, se declara el mismo led, en estado bajo (LOW) y de igual manera, un tiempo asignado en el que debera estar apagado. 
   
   digitalWrite(led_verde,HIGH);   //alto
   delay(valor_pote); //31500 Es el tiempo real que dura un semaforo
@@ -140,7 +139,7 @@ El potenciometro no es necesario indicarlo.
       rojo(); 
    }
 
--- Semaforo peatonal 
+    -- Semaforo peatonal 
 *Cada una de las instrucciones se adicionan a las ya indicadas anteriormente.*
  1. Se definen cada uno de los led con sus respectivos pines a los que estan conectados. Recordemos que son 2 semaforos peatonales.
     #define verde1 5  //paso 1
