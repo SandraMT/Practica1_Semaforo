@@ -56,10 +56,10 @@ General
     -- Semáforo vehicular
  1. Se definen cada uno de los led con sus respectivos pines a los que estan conectados y el potenciometro, ya que con este manejaremos el tiempo en que dura el paso vehicular (led verde prendido). 
  
-  #define led_verde 2
-  #define led_amarillo 3
-  #define led_rojo 4
-  #define pote 1 
+        #define led_verde 2
+        #define led_amarillo 3
+        #define led_rojo 4
+        #define pote 1 
   
   1.1 Añadiremos un valor de tipo entero el que inicializaremos en 0, esto será para almacenar el valor que vaya tomando el potenciomentro conforme movamos la perilla.
  ** Verificar que el núumero asignado en el Sketch coincida con el pin al que esta conectado en el microcontrolador.
