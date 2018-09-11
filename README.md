@@ -151,14 +151,15 @@ El potenciometro no es necesario indicarlo.
         rojo(); 
       }
 
-    -- Semaforo peatonal 
+
+    -- Semáforo peatonal 
 *Cada una de las instrucciones se adicionan a las ya indicadas anteriormente.*
  1. Se definen cada uno de los led con sus respectivos pines a los que estan conectados. Recordemos que son 2 semaforos peatonales.
  
-    #define verde1 5  //paso 1
-    #define rojo1 6 
-    #define verde2 7 //paso 2
-    #define rojo2 8
+        #define verde1 5  //paso 1
+        #define rojo1 6 
+        #define verde2 7 //paso 2
+        #define rojo2 8
     
  2. Ya que los semaforos peatonales deben de estar sincronizados con los semáforos vehiculares, la programacion de estos, estará dentro de los diferentes estados del semáforo vehicular. 
  Dentro del primer estado: Verde, se activan los led rojos, ya que mientras el vehículo tenga paso, los peatones no deben de pasar. No se configura tiempo de duración ya que estan conectados a los estados del semaforo vehicular y cambiaran con estos. 
